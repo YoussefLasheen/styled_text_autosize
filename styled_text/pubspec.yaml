@@ -11,6 +11,7 @@ environment:
   flutter: ">=3.7.0"
 
 dependencies:
+  auto_size_text: ^3.0.0
   flutter:
     sdk: flutter
   xmlstream: ^1.0.0

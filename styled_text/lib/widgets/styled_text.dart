@@ -1,5 +1,6 @@
 import 'dart:ui' as ui show TextHeightBehavior, BoxHeightStyle, BoxWidthStyle;
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -259,7 +260,8 @@ class StyledText extends StatelessWidget {
     final defaultTextStyle = DefaultTextStyle.of(context);
     final registrar = SelectionContainer.maybeOf(context);
 
-    Widget result = RichText(
+    Widget result = AutoSizeText.rich(
+      textSpan,
       textAlign: textAlign ?? defaultTextStyle.textAlign ?? TextAlign.start,
       textDirection: textDirection,
       softWrap: softWrap ?? defaultTextStyle.softWrap,
@@ -269,13 +271,6 @@ class StyledText extends StatelessWidget {
       maxLines: maxLines ?? defaultTextStyle.maxLines,
       locale: locale,
       strutStyle: strutStyle,
-      textWidthBasis: textWidthBasis ?? defaultTextStyle.textWidthBasis,
-      textHeightBehavior: textHeightBehavior ??
-          defaultTextStyle.textHeightBehavior ??
-          DefaultTextHeightBehavior.maybeOf(context),
-      text: textSpan,
-      selectionRegistrar: registrar,
-      selectionColor: DefaultSelectionStyle.of(context).selectionColor,
     );
 
     if (registrar != null) {
