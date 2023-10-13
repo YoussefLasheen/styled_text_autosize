@@ -10,3 +10,4 @@ export 'tags/styled_text_tag_widget_builder.dart';
 
 export 'widgets/styled_text.dart';
 export 'widgets/custom_styled_text.dart';
+export 'widgets/animated_styled_text.dart';

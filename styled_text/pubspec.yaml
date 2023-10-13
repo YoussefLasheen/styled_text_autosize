@@ -11,9 +11,11 @@ environment:
   flutter: ">=3.7.0"
 
 dependencies:
+  animated_text_kit: ^4.2.2
   auto_size_text: ^3.0.0
   flutter:
     sdk: flutter
+  flutter_animate: ^4.2.0+1
   xmlstream: ^1.0.0
 
 dev_dependencies:
